@@ -1,0 +1,17 @@
+Retry logic is implemented in the TestNG
+Suppose the test will be failed in any UI automation, it will try to execute the test cases again based on the maximum count
+
+IRetryAnalyser --> We need to override the method that is present in Retry class
+
+suppose, if the first attempt is Passed, then Retry logic won;t be triggered.
+If the test case is failed --> Test case will retry again upto 3 times -> In any of the iterations, test case will be passed then it
+will be considered as Pass
+In any of the iterations, test case will be FAILED then it will be considered as Fail
+
+Log4J Dependency
+Add the resources directory in the src/main/java
+Log.info is faster than System.out.println
+Log.info will be displayed in the timestamp
+This is very popular library -> Dev's will also use the Log4J api;s
+
+There are 4 stages of Logger --> Info, Error, Warn, Debug

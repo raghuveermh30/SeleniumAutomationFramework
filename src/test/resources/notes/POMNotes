@@ -1,0 +1,26 @@
+The basic rule of thumb for a page object is that it should allow a software client to do anything and see anything that a human can.
+
+
+There are differences of opinion on whether page objects should include assertions themselves, or just provide data for test scripts to do the assertions.
+
+Advocates of including assertions in page objects say that this helps avoid duplication of assertions in test scripts, makes it easier to provide better error messages, and supports a more TellDontAsk style API.
+
+Advocates of assertion-free page objects say that including assertions mixes the responsibilities of providing access to page data with assertion logic, and leads to a bloated page object.
+
+I favor having no assertions in page objects. I think you can avoid duplication by providing assertion libraries for common assertions - which can also make it easier to provide good diagnostics.
+
+Page objects are commonly used for testing, but should not make assertions themselves.
+Their responsibility is to provide access to the state of the underlying page. It's up to test clients to carry out the assertion logic.
+
+Refer Link -> https://martinfowler.com/bliki/PageObject.html
+
+Page objects are a classic example of encapsulation - they hide the details of the UI structure and widgetry from other components (the tests).
+
+******
+
+Maintaining the Excel sheet is not good
+TimeComplexity will be o(n2)
+Simple use Object array instead of Excel
+Excel should be in licensed
+Apachi POI are Thread safe hence Parallel execution is not possible
+Maintaining Excel is very complex operation
